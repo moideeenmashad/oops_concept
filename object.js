@@ -2,7 +2,7 @@
 let car = {
   brand: "BMW",
   modal: "M Competition",
-  year: "2015",
+  year: 2015,
   engine: {
     engin_size: "2.0 L",
     cylinders: "Inline 4",
@@ -11,3 +11,12 @@ let car = {
     torque: "200 lb-ft @ 1,250 rpm",
   },
 };
+
+let newCar = { ...car };
+console.log(car);
+
+newCar.year = 2016;
+
+let modifiedCar = JSON.stringify(newCar);
+console.log(newCar);
+console.log(modifiedCar);
